@@ -1,0 +1,28 @@
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--beacon-font-family-sans);
+  font-weight: var(--beacon-font-weight-medium);
+  color: var(--beacon-color-text-secondary);
+  background-color: var(--beacon-color-surface-sunken);
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  border-bottom-width: 2px;
+  border-radius: var(--beacon-radius-sm);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.sm {
+  min-width: 18px;
+  height: 18px;
+  padding: 0 var(--beacon-space-1);
+  font-size: 11px;
+}
+
+.md {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 var(--beacon-space-2);
+  font-size: var(--beacon-font-size-body-xs);
+}

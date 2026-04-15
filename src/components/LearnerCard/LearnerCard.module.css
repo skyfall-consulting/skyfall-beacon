@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--beacon-space-3);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-3);
+}
+
+.identity {
+  flex: 1;
+  min-width: 0;
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-4);
+}
+
+.progressMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--beacon-space-1);
+}
+
+.stats {
+  display: flex;
+  gap: var(--beacon-space-6);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--beacon-space-1);
+}

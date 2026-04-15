@@ -1,0 +1,155 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+  border-radius: var(--beacon-radius-full);
+  font-family: var(--beacon-font-family-sans);
+  font-weight: var(--beacon-font-weight-medium);
+  white-space: nowrap;
+  vertical-align: middle;
+  transition:
+    background-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard),
+    box-shadow var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+/* Sizes */
+.sm {
+  height: 24px;
+  padding: 0 var(--beacon-space-2);
+  font-size: var(--beacon-font-size-caption);
+}
+
+.md {
+  height: 30px;
+  padding: 0 var(--beacon-space-3);
+  font-size: var(--beacon-font-size-body-sm);
+}
+
+/* ---------- Filled ---------- */
+
+.filled.neutral {
+  background-color: var(--beacon-color-neutral-100);
+  color: var(--beacon-color-text-primary);
+}
+
+.filled.primary {
+  background-color: var(--beacon-color-brand-primary-50);
+  color: var(--beacon-color-brand-primary-700);
+}
+
+.filled.success {
+  background-color: var(--beacon-color-success-50);
+  color: var(--beacon-color-success-700);
+}
+
+.filled.warning {
+  background-color: var(--beacon-color-warning-50);
+  color: var(--beacon-color-warning-700);
+}
+
+.filled.error {
+  background-color: var(--beacon-color-error-50);
+  color: var(--beacon-color-error-700);
+}
+
+.filled.info {
+  background-color: var(--beacon-color-info-50);
+  color: var(--beacon-color-info-700);
+}
+
+/* ---------- Outlined ---------- */
+
+.outlined {
+  background-color: transparent;
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default);
+}
+
+.outlined.neutral {
+  border-color: var(--beacon-color-border-default);
+  color: var(--beacon-color-text-primary);
+}
+
+.outlined.primary {
+  border-color: var(--beacon-color-brand-primary-200);
+  color: var(--beacon-color-brand-primary-700);
+}
+
+.outlined.success {
+  border-color: var(--beacon-color-success-500);
+  color: var(--beacon-color-success-700);
+}
+
+.outlined.warning {
+  border-color: var(--beacon-color-warning-500);
+  color: var(--beacon-color-warning-700);
+}
+
+.outlined.error {
+  border-color: var(--beacon-color-error-500);
+  color: var(--beacon-color-error-700);
+}
+
+.outlined.info {
+  border-color: var(--beacon-color-info-500);
+  color: var(--beacon-color-info-700);
+}
+
+/* ---------- Interactive ---------- */
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  filter: brightness(0.96);
+}
+
+.clickable:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: var(--beacon-focus-ring-offset);
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+/* ---------- Disabled ---------- */
+
+.disabled {
+  opacity: var(--beacon-opacity-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---------- Sub-elements ---------- */
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 calc(-1 * var(--beacon-space-1)) 0 0;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: var(--beacon-radius-full);
+  opacity: 0.64;
+  transition: opacity var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+.deleteButton:hover {
+  opacity: 1;
+}
+
+.deleteButton:disabled {
+  cursor: not-allowed;
+}

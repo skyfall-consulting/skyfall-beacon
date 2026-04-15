@@ -1,0 +1,93 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+  font-family: var(--beacon-font-family-sans);
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  transition:
+    color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard),
+    text-decoration-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+/* ---------- Colors ---------- */
+
+.color-primary {
+  color: var(--beacon-color-brand-primary-600);
+}
+
+.color-primary:hover {
+  color: var(--beacon-color-brand-primary-700);
+}
+
+.color-secondary {
+  color: var(--beacon-color-text-secondary);
+}
+
+.color-secondary:hover {
+  color: var(--beacon-color-text-primary);
+}
+
+.color-inherit {
+  color: inherit;
+}
+
+.color-inherit:hover {
+  opacity: 0.8;
+}
+
+/* ---------- Variants ---------- */
+
+.default {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: currentColor;
+}
+
+.subtle {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.subtle:hover {
+  text-decoration-color: currentColor;
+}
+
+.standalone {
+  text-decoration: none;
+  font-weight: var(--beacon-font-weight-medium);
+}
+
+.standalone:hover {
+  text-decoration: none;
+}
+
+/* ---------- Focus ---------- */
+
+.link:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+/* ---------- Disabled ---------- */
+
+.disabled {
+  opacity: var(--beacon-opacity-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+/* ---------- Sub-elements ---------- */
+
+.startIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}

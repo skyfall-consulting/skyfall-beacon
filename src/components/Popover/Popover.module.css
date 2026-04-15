@@ -1,0 +1,82 @@
+.container {
+  position: relative;
+  display: inline-flex;
+}
+
+.trigger {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  z-index: 50;
+  min-width: 200px;
+  padding: var(--beacon-space-4);
+  background-color: var(--beacon-color-surface-default);
+  border: var(--beacon-border-width-hairline) solid var(--beacon-color-border-default);
+  border-radius: var(--beacon-radius-lg);
+  box-shadow: var(--beacon-shadow-lg);
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-body-md);
+  line-height: var(--beacon-line-height-body-md);
+  color: var(--beacon-color-text-primary);
+  animation: beacon-popover-in var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+/* Placement */
+.bottom {
+  top: calc(100% + var(--beacon-space-2));
+}
+
+.top {
+  bottom: calc(100% + var(--beacon-space-2));
+}
+
+.left {
+  right: calc(100% + var(--beacon-space-2));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  left: calc(100% + var(--beacon-space-2));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Alignment (for top/bottom) */
+.align-start {
+  left: 0;
+}
+
+.align-center:not(.left):not(.right) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.align-end {
+  right: 0;
+}
+
+@keyframes beacon-popover-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Fix transform for centered top/bottom (override animation target) */
+.align-center.bottom,
+.align-center.top {
+  transform: translateX(-50%);
+}
+
+.left,
+.right {
+  transform: translateY(-50%);
+}

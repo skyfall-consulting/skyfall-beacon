@@ -1,0 +1,7 @@
+/* Card — thin layer over Paper.
+   Surface, border, radius, elevation, and padding delegated to Paper.
+   Only Card-specific enhancements here. */
+
+.raised {
+  border-bottom: var(--beacon-border-width-medium) var(--beacon-border-style-default) var(--beacon-color-border-subtle);
+}

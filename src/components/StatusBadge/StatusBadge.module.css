@@ -1,0 +1,69 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+  border-radius: var(--beacon-radius-full);
+  font-family: var(--beacon-font-family-sans);
+  font-weight: var(--beacon-font-weight-medium);
+  white-space: nowrap;
+}
+
+/* Sizes */
+.sm {
+  padding: 1px var(--beacon-space-2);
+  font-size: var(--beacon-font-size-caption);
+  line-height: var(--beacon-line-height-caption);
+}
+
+.md {
+  padding: 2px var(--beacon-space-3);
+  font-size: var(--beacon-font-size-body-sm);
+  line-height: var(--beacon-line-height-body-sm);
+}
+
+/* Status dot */
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--beacon-radius-full);
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+/* ----------------------------------------------------------------------------
+   Status colors — semantic vocabulary shared across Skyfall kits
+   ---------------------------------------------------------------------------- */
+
+.neutral {
+  background-color: var(--beacon-color-neutral-100);
+  color: var(--beacon-color-text-secondary);
+}
+
+.info {
+  background-color: var(--beacon-color-info-50);
+  color: var(--beacon-color-info-700);
+}
+
+.success,
+.completed {
+  background-color: var(--beacon-color-success-50);
+  color: var(--beacon-color-success-700);
+}
+
+.warning,
+.in-progress,
+.pending {
+  background-color: var(--beacon-color-warning-50);
+  color: var(--beacon-color-warning-700);
+}
+
+.error {
+  background-color: var(--beacon-color-error-50);
+  color: var(--beacon-color-error-700);
+}
+
+.inactive,
+.locked {
+  background-color: var(--beacon-color-neutral-100);
+  color: var(--beacon-color-text-muted);
+}

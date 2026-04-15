@@ -1,0 +1,35 @@
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend {
+  display: block;
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-label-lg);
+  font-weight: var(--beacon-font-weight-medium);
+  line-height: var(--beacon-line-height-label-lg);
+  color: var(--beacon-color-text-primary);
+  margin-bottom: var(--beacon-space-2);
+  padding: 0;
+}
+
+.options {
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+  gap: var(--beacon-space-2);
+}
+
+.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--beacon-space-4);
+}
+
+.fieldset:disabled {
+  opacity: var(--beacon-opacity-disabled);
+}

@@ -1,0 +1,87 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  border-radius: var(--beacon-radius-md);
+  background-color: var(--beacon-color-surface-default);
+  color: var(--beacon-color-text-primary);
+  font-family: var(--beacon-font-family-sans);
+  transition:
+    border-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard),
+    box-shadow var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+.input:hover:not(:disabled):not(:focus) {
+  border-color: var(--beacon-color-border-strong);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--beacon-color-brand-primary-500);
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  opacity: var(--beacon-opacity-disabled);
+  background-color: var(--beacon-color-surface-subtle);
+}
+
+/* Hide native calendar icon in WebKit browsers */
+.input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  right: var(--beacon-space-3);
+  color: var(--beacon-color-text-muted);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.sm .input {
+  height: var(--beacon-size-control-sm);
+  padding: 0 calc(var(--beacon-space-3) + 20px) 0 var(--beacon-space-3);
+  font-size: var(--beacon-font-size-body-sm);
+}
+
+.md .input {
+  height: var(--beacon-size-control-md);
+  padding: 0 calc(var(--beacon-space-4) + 20px) 0 var(--beacon-space-4);
+  font-size: var(--beacon-font-size-body-md);
+}
+
+.lg .input {
+  height: var(--beacon-size-control-lg);
+  padding: 0 calc(var(--beacon-space-4) + 22px) 0 var(--beacon-space-4);
+  font-size: var(--beacon-font-size-body-lg);
+}
+
+/* Error */
+.error {
+  border-color: var(--beacon-color-error-500);
+}
+
+.error:focus {
+  border-color: var(--beacon-color-error-500);
+  box-shadow: 0 0 0 3px rgba(194, 58, 58, 0.2);
+}

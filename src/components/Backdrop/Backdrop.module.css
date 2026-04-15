@@ -1,0 +1,27 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--beacon-z-overlay, 1300);
+  animation: beacon-backdrop-fade-in var(--beacon-motion-duration-slow) var(--beacon-motion-easing-standard) both;
+}
+
+/* Variants */
+.default {
+  background-color: var(--beacon-color-overlay-scrim, rgba(22, 32, 43, 0.48));
+}
+
+.light {
+  background-color: rgba(22, 32, 43, 0.24);
+}
+
+.opaque {
+  background-color: var(--beacon-color-neutral-900);
+}
+
+@keyframes beacon-backdrop-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

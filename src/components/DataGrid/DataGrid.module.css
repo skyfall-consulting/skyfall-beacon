@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+}
+
+/* Sticky header */
+.stickyHeader thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--beacon-color-surface-default);
+}
+
+/* Comfortable density */
+.comfortable th,
+.comfortable td {
+  padding: var(--beacon-space-4) var(--beacon-space-5);
+  height: var(--beacon-size-control-lg);
+}
+
+/* Sort button */
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  font-weight: var(--beacon-font-weight-medium);
+  white-space: nowrap;
+}
+
+.sortButton:hover {
+  color: var(--beacon-color-text-primary);
+}
+
+.sortButton:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: 2px;
+  border-radius: var(--beacon-radius-sm);
+}
+
+.sortIcon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Checkbox */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--beacon-color-brand-primary-500);
+}
+
+/* Selected row */
+.selectedRow {
+  background-color: var(--beacon-color-brand-primary-50, rgba(59, 130, 246, 0.06)) !important;
+}
+
+/* Clickable row */
+.clickableRow {
+  cursor: pointer;
+}
+
+.clickableRow:hover {
+  background-color: var(--beacon-color-neutral-100);
+}

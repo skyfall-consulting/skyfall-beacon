@@ -1,0 +1,174 @@
+.stepper {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Horizontal layout */
+.horizontal .list {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.horizontal .step {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.horizontal .stepButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--beacon-space-2);
+}
+
+.horizontal .connector {
+  display: block;
+  flex: 1;
+  height: 2px;
+  margin-top: 16px;
+  margin-left: var(--beacon-space-2);
+  margin-right: var(--beacon-space-2);
+  background-color: var(--beacon-color-border-default);
+  transition: background-color var(--beacon-motion-duration-normal) var(--beacon-motion-easing-standard);
+}
+
+/* Vertical layout */
+.vertical .list {
+  flex-direction: column;
+}
+
+.vertical .step {
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical .stepButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--beacon-space-3);
+}
+
+.vertical .connector {
+  display: block;
+  width: 2px;
+  height: 24px;
+  margin-left: 15px;
+  margin-top: var(--beacon-space-1);
+  margin-bottom: var(--beacon-space-1);
+  background-color: var(--beacon-color-border-default);
+  transition: background-color var(--beacon-motion-duration-normal) var(--beacon-motion-easing-standard);
+}
+
+/* Step button / container */
+.stepButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: var(--beacon-space-1);
+  border-radius: var(--beacon-radius-sm);
+  transition: background-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+  font-family: var(--beacon-font-family-sans);
+}
+
+button.stepButton:hover {
+  background-color: var(--beacon-color-surface-subtle);
+}
+
+button.stepButton:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: var(--beacon-focus-ring-offset);
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+div.stepButton {
+  cursor: default;
+}
+
+/* Indicator circle */
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--beacon-radius-full);
+  border: 2px solid var(--beacon-color-border-default);
+  background-color: var(--beacon-color-surface-default);
+  font-size: var(--beacon-font-size-body-sm);
+  font-weight: var(--beacon-font-weight-medium);
+  color: var(--beacon-color-text-muted);
+  flex-shrink: 0;
+  transition:
+    background-color var(--beacon-motion-duration-normal) var(--beacon-motion-easing-standard),
+    border-color var(--beacon-motion-duration-normal) var(--beacon-motion-easing-standard),
+    color var(--beacon-motion-duration-normal) var(--beacon-motion-easing-standard);
+}
+
+.indicatorCurrent {
+  border-color: var(--beacon-color-brand-primary-500);
+  color: var(--beacon-color-brand-primary-500);
+  box-shadow: var(--beacon-shadow-sm);
+}
+
+.indicatorCompleted {
+  border-color: var(--beacon-color-brand-primary-500);
+  background-color: var(--beacon-color-brand-primary-500);
+  color: var(--beacon-color-text-inverse);
+}
+
+/* Labels */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: var(--beacon-font-size-body-sm);
+  font-weight: var(--beacon-font-weight-medium);
+  color: var(--beacon-color-text-muted);
+  line-height: var(--beacon-line-height-body-sm);
+}
+
+.labelCurrent {
+  color: var(--beacon-color-text-primary);
+  font-weight: var(--beacon-font-weight-semibold);
+}
+
+.description {
+  font-size: var(--beacon-font-size-body-sm);
+  color: var(--beacon-color-text-muted);
+  line-height: var(--beacon-line-height-body-sm);
+  font-weight: var(--beacon-font-weight-regular);
+}
+
+/* Connector completed state */
+.connectorCompleted {
+  background-color: var(--beacon-color-brand-primary-500);
+}
+
+/* Step with connector */
+.stepWithConnector {
+  position: relative;
+}

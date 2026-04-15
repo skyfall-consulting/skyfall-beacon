@@ -1,0 +1,131 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Overview/Installation" />
+
+# Installation
+
+## Install the package
+
+```bash
+npm install @skyfall_ai/beacon
+```
+
+```bash
+pnpm add @skyfall_ai/beacon
+```
+
+Beacon requires React 18+ and Recharts 2.10+ as peer dependencies:
+
+```bash
+npm install react react-dom recharts
+```
+
+## Import styles
+
+Beacon ships a single CSS bundle that includes all component styles and design tokens. Import it once at your application root:
+
+```tsx
+// app/layout.tsx or main.tsx
+import '@skyfall_ai/beacon/styles.css';
+```
+
+This provides all Beacon CSS custom properties (`--beacon-*` tokens) and component styles. No additional theme provider or CSS setup is required.
+
+## Use components
+
+```tsx
+import { Button, TextField, Card, Typography } from '@skyfall_ai/beacon';
+
+function CourseSearch() {
+  return (
+    <Card>
+      <Typography variant="heading-sm">Find a course</Typography>
+      <TextField label="Course or instructor" placeholder="Search..." />
+      <Button>Search</Button>
+    </Card>
+  );
+}
+```
+
+## Learning patterns
+
+Beacon X learning components compose from the core system and ship from the same package. They are designed for student dashboards, educator views, course pages, and lesson surfaces:
+
+```tsx
+import {
+  CourseCard,
+  LessonRow,
+  AssignmentRow,
+  ProgressRing,
+  AchievementBadge,
+  LearnerCard,
+  NextLessonBanner,
+} from '@skyfall_ai/beacon';
+```
+
+A typical student dashboard composition:
+
+```tsx
+<NextLessonBanner
+  headline="Pick up where you left off"
+  lessonTitle="Designing for the median, not the average"
+  context="Module 3 · 12 min remaining"
+  tone="momentum"
+  ctaLabel="Continue lesson"
+  onCta={resumeLesson}
+/>
+
+<CourseCard
+  title="Foundations of Data Visualization"
+  instructor="Dr. Lena Park"
+  modules={8}
+  duration="6 hrs"
+  level="intermediate"
+  status="in-progress"
+  progress={42}
+/>
+```
+
+## Charts
+
+The chart system is built on Recharts. Import chart components alongside core components:
+
+```tsx
+import { ChartCard, LineChart, BarChart } from '@skyfall_ai/beacon/charts';
+```
+
+Recharts must be installed as a peer dependency.
+
+## Design tokens
+
+Beacon uses CSS custom properties for all visual decisions — colors, spacing, typography, motion, and elevation. Tokens are available globally once the CSS bundle is imported:
+
+```css
+.custom-element {
+  color: var(--beacon-color-text-primary);
+  font-family: var(--beacon-font-family-sans);
+  padding: var(--beacon-space-4);
+  border-radius: var(--beacon-radius-md);
+}
+```
+
+Beacon adds learning-specific tokens for guided-growth surfaces:
+
+```css
+.progress-fill {
+  background: var(--beacon-progress-fill-gradient);
+}
+
+.achievement-medallion {
+  box-shadow: var(--beacon-achievement-glow);
+}
+```
+
+Browse the **Components / Foundations / Tokens** page in this Storybook for the full token reference.
+
+## Next steps
+
+- Browse **Components** in the sidebar to explore the full core system
+- Check **Beacon X / Learning Patterns** for EdTech components (courses, lessons, assignments, learners)
+- Check **Beacon X / Charts** for data visualization components
+- Review **Components / Foundations** for design tokens, typography, and icons

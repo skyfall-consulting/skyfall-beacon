@@ -1,0 +1,388 @@
+/*
+ * Skyfall Beacon — Design Tokens
+ * Source of truth: Skyfall Beacon Style Guide v1
+ *
+ * Theme: Guided growth, visible progress, optimistic clarity.
+ * Naming convention: --beacon-{category}-{role}-{variant}-{scale}
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ============================================
+     BRAND & CORE PALETTE — Luminous Sky
+     ============================================ */
+  --beacon-color-brand-primary-50: #ECF6FF;
+  --beacon-color-brand-primary-100: #D6ECFF;
+  --beacon-color-brand-primary-200: #ADD7FF;
+  --beacon-color-brand-primary-300: #7CBEFF;
+  --beacon-color-brand-primary-400: #4BA3FB;
+  --beacon-color-brand-primary-500: #1F86F0;
+  --beacon-color-brand-primary-600: #1370D6;
+  --beacon-color-brand-primary-700: #0E58AB;
+  --beacon-color-brand-primary-800: #0A4385;
+  --beacon-color-brand-primary-900: #073166;
+
+  /* ============================================
+     SECONDARY — INDIGO
+     ============================================ */
+  --beacon-color-brand-secondary-50: #EFEEFE;
+  --beacon-color-brand-secondary-100: #DDDBFC;
+  --beacon-color-brand-secondary-200: #BCB6F8;
+  --beacon-color-brand-secondary-300: #948AF1;
+  --beacon-color-brand-secondary-400: #7164E6;
+  --beacon-color-brand-secondary-500: #5546D1;
+  --beacon-color-brand-secondary-600: #4536B1;
+  --beacon-color-brand-secondary-700: #382B8E;
+  --beacon-color-brand-secondary-800: #2C236F;
+  --beacon-color-brand-secondary-900: #201A52;
+
+  /* ============================================
+     SUPPORT ACCENT — TEAL / MINT
+     ============================================ */
+  --beacon-color-accent-mint-50: #E8FAF4;
+  --beacon-color-accent-mint-100: #CDF3E5;
+  --beacon-color-accent-mint-200: #9CE7CC;
+  --beacon-color-accent-mint-300: #6BD6AF;
+  --beacon-color-accent-mint-400: #3FBE91;
+  --beacon-color-accent-mint-500: #20A074;
+  --beacon-color-accent-mint-600: #15825D;
+  --beacon-color-accent-mint-700: #10684A;
+
+  /* Aliased as "teal" for backward-compatible parity with Beacon APIs */
+  --beacon-color-accent-teal-50: #E8FAF4;
+  --beacon-color-accent-teal-100: #CDF3E5;
+  --beacon-color-accent-teal-200: #9CE7CC;
+  --beacon-color-accent-teal-300: #6BD6AF;
+  --beacon-color-accent-teal-400: #3FBE91;
+  --beacon-color-accent-teal-500: #20A074;
+  --beacon-color-accent-teal-600: #15825D;
+  --beacon-color-accent-teal-700: #10684A;
+
+  /* ============================================
+     REWARD ACCENT — SOFT AMBER
+     ============================================ */
+  --beacon-color-accent-amber-50: #FFF6E2;
+  --beacon-color-accent-amber-100: #FEEBC0;
+  --beacon-color-accent-amber-200: #FCD68A;
+  --beacon-color-accent-amber-300: #F8BD55;
+  --beacon-color-accent-amber-400: #ECA22F;
+  --beacon-color-accent-amber-500: #C9831A;
+  --beacon-color-accent-amber-600: #A06612;
+  --beacon-color-accent-amber-700: #7A4D0D;
+
+  /* ============================================
+     NEUTRAL PALETTE — Cloud / Slate
+     ============================================ */
+  --beacon-color-neutral-0: #FFFFFF;
+  --beacon-color-neutral-25: #FBFCFE;
+  --beacon-color-neutral-50: #F4F7FB;
+  --beacon-color-neutral-100: #ECF1F7;
+  --beacon-color-neutral-200: #DCE3ED;
+  --beacon-color-neutral-300: #C0CAD8;
+  --beacon-color-neutral-400: #91A0B5;
+  --beacon-color-neutral-500: #65758D;
+  --beacon-color-neutral-600: #4A586E;
+  --beacon-color-neutral-700: #334052;
+  --beacon-color-neutral-800: #222C3B;
+  --beacon-color-neutral-900: #131B28;
+
+  /* ============================================
+     SEMANTIC PALETTE
+     ============================================ */
+  --beacon-color-success-50: #E8F8EE;
+  --beacon-color-success-500: #259A57;
+  --beacon-color-success-700: #167440;
+
+  --beacon-color-warning-50: #FFF4DC;
+  --beacon-color-warning-500: #C9831A;
+  --beacon-color-warning-700: #8E5B0F;
+
+  --beacon-color-error-50: #FFEFEF;
+  --beacon-color-error-500: #D6383F;
+  --beacon-color-error-700: #9A2329;
+
+  --beacon-color-info-50: #ECF6FF;
+  --beacon-color-info-500: #1F86F0;
+  --beacon-color-info-700: #0E58AB;
+
+  /* ============================================
+     TEXT & SURFACE ALIASES
+     ============================================ */
+  --beacon-color-text-primary: #131B28;
+  --beacon-color-text-secondary: #4A586E;
+  --beacon-color-text-muted: #65758D;
+  --beacon-color-text-inverse: #FFFFFF;
+  --beacon-color-text-brand: #1370D6;
+
+  --beacon-color-surface-canvas: #FBFCFE;
+  --beacon-color-surface-default: #FFFFFF;
+  --beacon-color-surface-subtle: #F4F7FB;
+  --beacon-color-surface-raised: #FFFFFF;
+  --beacon-color-surface-overlay: #FFFFFF;
+  --beacon-color-surface-sunken: #ECF1F7;
+  --beacon-color-surface-hover: #ECF6FF;
+  --beacon-color-surface-active: #D6ECFF;
+  --beacon-color-surface-selected: #ECF6FF;
+  --beacon-color-surface-selected-hover: #D6ECFF;
+  --beacon-color-surface-spotlight: #ECF6FF;
+
+  --beacon-color-border-default: #DCE3ED;
+  --beacon-color-border-strong: #C0CAD8;
+  --beacon-color-border-subtle: #ECF1F7;
+  --beacon-color-border-inverse: #334052;
+  --beacon-color-border-brand: #1F86F0;
+  --beacon-color-border-success: #259A57;
+  --beacon-color-border-warning: #C9831A;
+  --beacon-color-border-error: #D6383F;
+
+  --beacon-color-focus-ring: #1F86F0;
+  --beacon-color-overlay-scrim: rgba(19, 27, 40, 0.48);
+
+  /* Beacon "glow" — subtle luminance for spotlight surfaces */
+  --beacon-color-glow-soft: rgba(31, 134, 240, 0.12);
+  --beacon-color-glow-medium: rgba(31, 134, 240, 0.22);
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  --beacon-font-family-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --beacon-font-family-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --beacon-font-weight-regular: 400;
+  --beacon-font-weight-medium: 500;
+  --beacon-font-weight-semibold: 600;
+  --beacon-font-weight-bold: 700;
+
+  /* Type scale — sizes */
+  --beacon-font-size-display-lg: 40px;
+  --beacon-font-size-display-md: 32px;
+  --beacon-font-size-heading-xl: 28px;
+  --beacon-font-size-heading-lg: 24px;
+  --beacon-font-size-heading-md: 20px;
+  --beacon-font-size-heading-sm: 18px;
+  --beacon-font-size-body-lg: 16px;
+  --beacon-font-size-body-md: 14px;
+  --beacon-font-size-body-sm: 13px;
+  --beacon-font-size-label-lg: 14px;
+  --beacon-font-size-label-md: 13px;
+  --beacon-font-size-caption: 12px;
+  --beacon-font-size-data: 14px;
+  --beacon-font-size-code: 13px;
+
+  /* Type scale — line heights */
+  --beacon-line-height-display-lg: 48px;
+  --beacon-line-height-display-md: 40px;
+  --beacon-line-height-heading-xl: 36px;
+  --beacon-line-height-heading-lg: 32px;
+  --beacon-line-height-heading-md: 28px;
+  --beacon-line-height-heading-sm: 26px;
+  --beacon-line-height-body-lg: 24px;
+  --beacon-line-height-body-md: 22px;
+  --beacon-line-height-body-sm: 20px;
+  --beacon-line-height-label-lg: 20px;
+  --beacon-line-height-label-md: 18px;
+  --beacon-line-height-caption: 16px;
+  --beacon-line-height-data: 20px;
+  --beacon-line-height-code: 18px;
+
+  /* Letter spacing */
+  --beacon-tracking-tight: -0.02em;
+  --beacon-tracking-normal: 0em;
+  --beacon-tracking-wide: 0.01em;
+
+  /* ============================================
+     SPACING
+     ============================================ */
+  --beacon-space-0: 0;
+  --beacon-space-1: 4px;
+  --beacon-space-2: 8px;
+  --beacon-space-3: 12px;
+  --beacon-space-4: 16px;
+  --beacon-space-5: 20px;
+  --beacon-space-6: 24px;
+  --beacon-space-8: 32px;
+  --beacon-space-10: 40px;
+  --beacon-space-12: 48px;
+  --beacon-space-16: 64px;
+  --beacon-space-20: 80px;
+
+  /* ============================================
+     SIZING
+     ============================================ */
+  --beacon-size-control-sm: 32px;
+  --beacon-size-control-md: 40px;
+  --beacon-size-control-lg: 48px;
+
+  --beacon-size-icon-xs: 12px;
+  --beacon-size-icon-sm: 16px;
+  --beacon-size-icon-md: 20px;
+  --beacon-size-icon-lg: 24px;
+
+  --beacon-size-touch-min: 44px;
+
+  --beacon-size-sidebar-default: 280px;
+  --beacon-size-modal-sm: 400px;
+  --beacon-size-modal-md: 560px;
+  --beacon-size-modal-lg: 720px;
+  --beacon-size-modal-xl: 880px;
+
+  /* ============================================
+     RADIUS — Beacon prefers slightly softer corners
+     ============================================ */
+  --beacon-radius-none: 0;
+  --beacon-radius-sm: 8px;
+  --beacon-radius-md: 12px;
+  --beacon-radius-lg: 16px;
+  --beacon-radius-xl: 20px;
+  --beacon-radius-full: 9999px;
+
+  /* ============================================
+     BORDERS
+     ============================================ */
+  --beacon-border-width-none: 0;
+  --beacon-border-width-hairline: 1px;
+  --beacon-border-width-medium: 2px;
+  --beacon-border-width-strong: 3px;
+  --beacon-border-style-default: solid;
+
+  /* ============================================
+     SHADOWS & ELEVATION — softer, slightly more luminous
+     ============================================ */
+  --beacon-shadow-none: none;
+  --beacon-shadow-xs: 0 1px 2px rgba(19, 27, 40, 0.04);
+  --beacon-shadow-sm: 0 1px 2px rgba(19, 27, 40, 0.05), 0 2px 8px rgba(19, 27, 40, 0.04);
+  --beacon-shadow-md: 0 2px 4px rgba(19, 27, 40, 0.04), 0 10px 24px rgba(19, 27, 40, 0.08);
+  --beacon-shadow-lg: 0 4px 8px rgba(19, 27, 40, 0.05), 0 20px 44px rgba(19, 27, 40, 0.12);
+  --beacon-shadow-xl: 0 8px 16px rgba(19, 27, 40, 0.06), 0 28px 60px rgba(19, 27, 40, 0.16);
+  --beacon-shadow-glow: 0 0 0 1px rgba(31, 134, 240, 0.18), 0 8px 24px rgba(31, 134, 240, 0.18);
+  --beacon-shadow-focus: 0 0 0 3px rgba(31, 134, 240, 0.28);
+  --beacon-shadow-focus-error: 0 0 0 3px rgba(214, 56, 63, 0.22);
+  --beacon-shadow-focus-success: 0 0 0 3px rgba(37, 154, 87, 0.22);
+  --beacon-shadow-inset-xs: inset 0 1px 2px rgba(19, 27, 40, 0.06);
+  --beacon-shadow-inset-sm: inset 0 2px 4px rgba(19, 27, 40, 0.08);
+
+  /* ============================================
+     MOTION
+     ============================================ */
+  --beacon-motion-duration-fast: 120ms;
+  --beacon-motion-duration-base: 180ms;
+  --beacon-motion-duration-slow: 240ms;
+  --beacon-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --beacon-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --beacon-motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* ============================================
+     OPACITY
+     ============================================ */
+  --beacon-opacity-disabled: 0.48;
+  --beacon-opacity-subtle: 0.72;
+  --beacon-opacity-overlay: 0.48;
+  --beacon-opacity-scrim-strong: 0.64;
+
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+  --beacon-z-base: 0;
+  --beacon-z-dropdown: 1000;
+  --beacon-z-sticky: 1100;
+  --beacon-z-banner: 1200;
+  --beacon-z-overlay: 1300;
+  --beacon-z-modal: 1400;
+  --beacon-z-toast: 1500;
+  --beacon-z-tooltip: 1600;
+
+  /* ============================================
+     GRID & LAYOUT
+     ============================================ */
+  --beacon-layout-container-max: 1280px;
+  --beacon-layout-container-reading: 720px;
+  --beacon-layout-grid-columns: 12;
+  --beacon-layout-grid-gutter: 24px;
+  --beacon-layout-grid-margin-desktop: 32px;
+  --beacon-layout-grid-margin-tablet: 24px;
+  --beacon-layout-grid-margin-mobile: 16px;
+
+  /* ============================================
+     FOCUS & INTERACTION
+     ============================================ */
+  --beacon-focus-ring-width: 3px;
+  --beacon-focus-ring-color: rgba(31, 134, 240, 0.28);
+  --beacon-focus-ring-offset: 2px;
+  --beacon-focus-outline-color: #1F86F0;
+
+  /* ============================================
+     ICONOGRAPHY
+     ============================================ */
+  --beacon-icon-stroke-default: 1.75;
+  --beacon-icon-size-default: 20px;
+
+  /* ============================================
+     INTERACTIVE STATES
+     ============================================ */
+  --beacon-state-hover-overlay: rgba(31, 134, 240, 0.05);
+  --beacon-state-active-overlay: rgba(31, 134, 240, 0.10);
+  --beacon-state-selected-bg: #ECF6FF;
+  --beacon-state-selected-border: #ADD7FF;
+  --beacon-state-drag-bg: #F4F7FB;
+
+  /* ============================================
+     DATA VISUALIZATION — Beacon learning palette
+     ============================================ */
+  --beacon-data-vis-1: #1F86F0;
+  --beacon-data-vis-2: #5546D1;
+  --beacon-data-vis-3: #20A074;
+  --beacon-data-vis-4: #ECA22F;
+  --beacon-data-vis-5: #D6383F;
+  --beacon-data-vis-gridline: #DCE3ED;
+  --beacon-data-vis-axis: #65758D;
+
+  /* ============================================
+     PROGRESS & ACHIEVEMENT (Beacon-specific)
+     ============================================ */
+  --beacon-progress-track: #ECF1F7;
+  --beacon-progress-fill-default: #1F86F0;
+  --beacon-progress-fill-success: #20A074;
+  --beacon-progress-fill-reward: #ECA22F;
+  --beacon-progress-fill-gradient: linear-gradient(90deg, #1F86F0 0%, #5546D1 100%);
+  --beacon-achievement-glow: 0 0 0 4px rgba(236, 162, 47, 0.18);
+  --beacon-milestone-marker: #5546D1;
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --beacon-motion-duration-fast: 0ms;
+    --beacon-motion-duration-base: 0ms;
+    --beacon-motion-duration-slow: 0ms;
+  }
+}
+
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-body-lg);
+  line-height: var(--beacon-line-height-body-lg);
+  color: var(--beacon-color-text-primary);
+  background-color: var(--beacon-color-surface-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible baseline — keyboard-only focus ring */
+:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: var(--beacon-focus-ring-offset);
+  box-shadow: var(--beacon-shadow-focus);
+}

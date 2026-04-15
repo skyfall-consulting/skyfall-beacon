@@ -1,0 +1,17 @@
+node_modules/
+dist/
+storybook-static/
+.DS_Store
+*.log
+.env
+.env.local
+
+*storybook.log
+
+# Claude worktrees
+.claude/worktrees/
+
+# Non-source assets
+Logo/
+Style Guide V1/
+.github/

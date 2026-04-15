@@ -1,0 +1,112 @@
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--beacon-border-width-hairline) solid transparent;
+  border-radius: var(--beacon-radius-md);
+  cursor: pointer;
+  transition:
+    background-color var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard),
+    border-color var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard),
+    box-shadow var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard),
+    color var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.iconButton:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: var(--beacon-focus-ring-offset);
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+.iconButton:disabled {
+  cursor: not-allowed;
+  opacity: var(--beacon-opacity-disabled);
+}
+
+.sm {
+  width: var(--beacon-size-control-sm);
+  height: var(--beacon-size-control-sm);
+}
+
+.md {
+  width: var(--beacon-size-control-md);
+  height: var(--beacon-size-control-md);
+}
+
+.lg {
+  width: var(--beacon-size-control-lg);
+  height: var(--beacon-size-control-lg);
+}
+
+.primary {
+  background: linear-gradient(
+    180deg,
+    var(--beacon-color-brand-primary-500) 0%,
+    var(--beacon-color-brand-primary-600) 100%
+  );
+  color: var(--beacon-color-text-inverse);
+  box-shadow: var(--beacon-shadow-xs);
+}
+
+.primary:hover:not(:disabled) {
+  background: linear-gradient(
+    180deg,
+    var(--beacon-color-brand-primary-600) 0%,
+    var(--beacon-color-brand-primary-700) 100%
+  );
+  box-shadow: var(--beacon-shadow-sm);
+}
+
+.primary:active:not(:disabled) {
+  background: var(--beacon-color-brand-primary-700);
+  box-shadow: var(--beacon-shadow-inset-xs);
+}
+
+.secondary {
+  background-color: var(--beacon-color-surface-default);
+  color: var(--beacon-color-text-primary);
+  border-color: var(--beacon-color-border-default);
+  box-shadow: var(--beacon-shadow-xs);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: var(--beacon-color-surface-hover);
+  border-color: var(--beacon-color-border-strong);
+  box-shadow: var(--beacon-shadow-sm);
+}
+
+.secondary:active:not(:disabled) {
+  background-color: var(--beacon-color-surface-active);
+  box-shadow: var(--beacon-shadow-inset-xs);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--beacon-color-text-secondary);
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: var(--beacon-color-surface-hover);
+  color: var(--beacon-color-text-primary);
+}
+
+.ghost:active:not(:disabled) {
+  background-color: var(--beacon-color-surface-active);
+}
+
+.danger {
+  background-color: transparent;
+  color: var(--beacon-color-error-500);
+}
+
+.danger:hover:not(:disabled) {
+  background-color: var(--beacon-color-error-50);
+  color: var(--beacon-color-error-700);
+}
+
+.danger:active:not(:disabled) {
+  background-color: var(--beacon-color-error-50);
+  box-shadow: var(--beacon-shadow-inset-xs);
+}

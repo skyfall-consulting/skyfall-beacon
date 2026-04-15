@@ -1,0 +1,16 @@
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--beacon-color-brand-primary-500);
+}
+
+.svg {
+  animation: beacon-spin 0.8s linear infinite;
+}
+
+@keyframes beacon-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

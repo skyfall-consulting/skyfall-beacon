@@ -1,0 +1,14 @@
+.divider {
+  border: none;
+  border-top: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  width: 100%;
+}
+
+.light {
+  border-top-color: var(--beacon-color-border-subtle);
+}
+
+.none { margin: 0; }
+.sm { margin: var(--beacon-space-2) 0; }
+.md { margin: var(--beacon-space-4) 0; }
+.lg { margin: var(--beacon-space-8) 0; }

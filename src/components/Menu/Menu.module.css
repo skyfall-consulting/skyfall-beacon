@@ -1,0 +1,133 @@
+.menuContainer {
+  position: relative;
+  display: inline-flex;
+}
+
+.trigger {
+  display: inline-flex;
+}
+
+/* ---------- Menu surface ---------- */
+
+.menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  z-index: var(--beacon-z-dropdown, 1100);
+  min-width: 180px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: var(--beacon-space-1) 0;
+  background-color: var(--beacon-color-surface-default);
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  border-radius: var(--beacon-radius-md);
+  box-shadow: var(--beacon-shadow-lg);
+  font-family: var(--beacon-font-family-sans);
+  animation: beacon-menu-in var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard) both;
+}
+
+.align-start {
+  left: 0;
+}
+
+.align-end {
+  right: 0;
+}
+
+/* ---------- MenuItem ---------- */
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-2);
+  padding: var(--beacon-space-2) var(--beacon-space-4);
+  font-size: var(--beacon-font-size-body-sm);
+  line-height: var(--beacon-line-height-body-sm);
+  color: var(--beacon-color-text-primary);
+  cursor: pointer;
+  transition: background-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+  outline: none;
+}
+
+.menuItem:hover,
+.menuItem:focus-visible {
+  background-color: var(--beacon-color-surface-hover, var(--beacon-color-neutral-50));
+}
+
+.menuItem:focus-visible {
+  box-shadow: inset 2px 0 0 0 var(--beacon-color-brand-primary-500);
+}
+
+/* Danger */
+.menuItem.danger {
+  color: var(--beacon-color-error-700);
+}
+
+.menuItem.danger:hover,
+.menuItem.danger:focus-visible {
+  background-color: var(--beacon-color-error-50);
+}
+
+/* Disabled */
+.menuItem.itemDisabled {
+  opacity: var(--beacon-opacity-disabled);
+  cursor: not-allowed;
+}
+
+.menuItem.itemDisabled:hover {
+  background-color: transparent;
+}
+
+/* Sub-elements */
+.itemIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--beacon-color-text-muted);
+}
+
+.menuItem.danger .itemIcon {
+  color: var(--beacon-color-error-500);
+}
+
+.itemLabel {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTrailing {
+  flex-shrink: 0;
+  font-size: var(--beacon-font-size-caption);
+  color: var(--beacon-color-text-muted);
+}
+
+/* ---------- Divider ---------- */
+
+.divider {
+  height: 1px;
+  margin: var(--beacon-space-1) 0;
+  background-color: var(--beacon-color-border-default);
+}
+
+/* ---------- Group label ---------- */
+
+.groupLabel {
+  padding: var(--beacon-space-2) var(--beacon-space-4) var(--beacon-space-1);
+  font-size: var(--beacon-font-size-caption);
+  font-weight: var(--beacon-font-weight-semibold);
+  color: var(--beacon-color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes beacon-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

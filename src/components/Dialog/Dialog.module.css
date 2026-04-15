@@ -1,0 +1,134 @@
+.dialog {
+  border: none;
+  border-radius: var(--beacon-radius-xl);
+  padding: 0;
+  box-shadow: var(--beacon-shadow-xl);
+  background-color: var(--beacon-color-surface-overlay);
+  width: 420px;
+  max-width: 90vw;
+}
+
+.dialog::backdrop {
+  background-color: var(--beacon-color-overlay-scrim);
+  animation: beacon-backdrop-in var(--beacon-motion-duration-slow) var(--beacon-motion-easing-standard);
+}
+
+.dialog[open] {
+  animation: beacon-dialog-in var(--beacon-motion-duration-slow) var(--beacon-motion-easing-standard);
+}
+
+.content {
+  padding: var(--beacon-space-6);
+  font-family: var(--beacon-font-family-sans);
+}
+
+.dangerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--beacon-radius-full);
+  background-color: var(--beacon-color-error-50);
+  color: var(--beacon-color-error-500);
+  margin-bottom: var(--beacon-space-4);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--beacon-font-size-heading-md);
+  font-weight: var(--beacon-font-weight-semibold);
+  line-height: var(--beacon-line-height-heading-md);
+  color: var(--beacon-color-text-primary);
+}
+
+.message {
+  margin-top: var(--beacon-space-2);
+  font-size: var(--beacon-font-size-body-md);
+  line-height: var(--beacon-line-height-body-md);
+  color: var(--beacon-color-text-secondary);
+}
+
+.message p {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--beacon-space-3);
+  margin-top: var(--beacon-space-6);
+}
+
+.cancelButton,
+.confirmButton {
+  padding: var(--beacon-space-2) var(--beacon-space-5);
+  border-radius: var(--beacon-radius-md);
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-body-sm);
+  font-weight: var(--beacon-font-weight-medium);
+  line-height: var(--beacon-line-height-body-md);
+  cursor: pointer;
+  transition:
+    background-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard),
+    box-shadow var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+.cancelButton {
+  background-color: var(--beacon-color-surface-default);
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  color: var(--beacon-color-text-primary);
+}
+
+.cancelButton:hover {
+  background-color: var(--beacon-color-surface-hover);
+}
+
+.cancelButton:focus-visible,
+.confirmButton:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: var(--beacon-focus-ring-offset);
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+.cancelButton:disabled,
+.confirmButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.confirmButton.default {
+  background-color: var(--beacon-color-info-600);
+  border: none;
+  color: #fff;
+}
+
+.confirmButton.default:hover:not(:disabled) {
+  background-color: var(--beacon-color-info-700);
+}
+
+.confirmButton.danger {
+  background-color: var(--beacon-color-error-600);
+  border: none;
+  color: #fff;
+}
+
+.confirmButton.danger:hover:not(:disabled) {
+  background-color: var(--beacon-color-error-700);
+}
+
+@keyframes beacon-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes beacon-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,78 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--beacon-border-width-hairline) solid transparent;
+  border-radius: var(--beacon-radius-md);
+  background: transparent;
+  color: var(--beacon-color-text-secondary);
+  font-family: var(--beacon-font-family-sans);
+  font-weight: var(--beacon-font-weight-medium);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Sizes */
+.sm .button {
+  min-width: 28px;
+  height: 28px;
+  font-size: var(--beacon-font-size-body-sm);
+  padding: 0 var(--beacon-space-1);
+}
+
+.md .button {
+  min-width: 36px;
+  height: 36px;
+  font-size: var(--beacon-font-size-body-md);
+  padding: 0 var(--beacon-space-2);
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--beacon-color-surface-subtle);
+  color: var(--beacon-color-text-primary);
+}
+
+.button:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: var(--beacon-focus-ring-offset);
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Active page */
+.active {
+  background-color: var(--beacon-color-brand-primary-500);
+  color: white;
+  border-color: var(--beacon-color-brand-primary-500);
+}
+
+.active:hover:not(:disabled) {
+  background-color: var(--beacon-color-brand-primary-600);
+  color: white;
+}
+
+/* Nav buttons */
+.nav {
+  color: var(--beacon-color-text-secondary);
+}
+
+.ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  color: var(--beacon-color-text-muted);
+  font-family: var(--beacon-font-family-sans);
+  user-select: none;
+}

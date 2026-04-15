@@ -1,0 +1,145 @@
+.typography {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Variant scale ---------- */
+
+.variant-display-lg {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-display-lg);
+  line-height: var(--beacon-line-height-display-lg);
+  font-weight: var(--beacon-font-weight-bold);
+  letter-spacing: var(--beacon-tracking-tight);
+}
+
+.variant-display-md {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-display-md);
+  line-height: var(--beacon-line-height-display-md);
+  font-weight: var(--beacon-font-weight-bold);
+  letter-spacing: var(--beacon-tracking-tight);
+}
+
+.variant-heading-xl {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-heading-xl);
+  line-height: var(--beacon-line-height-heading-xl);
+  font-weight: var(--beacon-font-weight-semibold);
+}
+
+.variant-heading-lg {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-heading-lg);
+  line-height: var(--beacon-line-height-heading-lg);
+  font-weight: var(--beacon-font-weight-semibold);
+}
+
+.variant-heading-md {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-heading-md);
+  line-height: var(--beacon-line-height-heading-md);
+  font-weight: var(--beacon-font-weight-semibold);
+}
+
+.variant-heading-sm {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-heading-sm);
+  line-height: var(--beacon-line-height-heading-sm);
+  font-weight: var(--beacon-font-weight-semibold);
+}
+
+.variant-body-lg {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-body-lg);
+  line-height: var(--beacon-line-height-body-lg);
+  font-weight: var(--beacon-font-weight-regular);
+}
+
+.variant-body-md {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-body-md);
+  line-height: var(--beacon-line-height-body-md);
+  font-weight: var(--beacon-font-weight-regular);
+}
+
+.variant-body-sm {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-body-sm);
+  line-height: var(--beacon-line-height-body-sm);
+  font-weight: var(--beacon-font-weight-regular);
+}
+
+.variant-label-lg {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-label-lg);
+  line-height: var(--beacon-line-height-label-lg);
+  font-weight: var(--beacon-font-weight-medium);
+}
+
+.variant-label-md {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-label-md);
+  line-height: var(--beacon-line-height-label-md);
+  font-weight: var(--beacon-font-weight-medium);
+}
+
+.variant-caption {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-caption);
+  line-height: var(--beacon-line-height-caption);
+  font-weight: var(--beacon-font-weight-regular);
+}
+
+.variant-data {
+  font-family: var(--beacon-font-family-mono);
+  font-size: var(--beacon-font-size-data);
+  line-height: var(--beacon-line-height-data);
+  font-weight: var(--beacon-font-weight-medium);
+}
+
+.variant-code {
+  font-family: var(--beacon-font-family-mono);
+  font-size: var(--beacon-font-size-code);
+  line-height: var(--beacon-line-height-code);
+  font-weight: var(--beacon-font-weight-regular);
+}
+
+/* ---------- Colors ---------- */
+
+.color-primary { color: var(--beacon-color-text-primary); }
+.color-secondary { color: var(--beacon-color-text-secondary); }
+.color-muted { color: var(--beacon-color-text-muted); }
+.color-inverse { color: var(--beacon-color-text-inverse); }
+.color-success { color: var(--beacon-color-success-700); }
+.color-warning { color: var(--beacon-color-warning-700); }
+.color-error { color: var(--beacon-color-error-700); }
+.color-info { color: var(--beacon-color-info-700); }
+.color-inherit { color: inherit; }
+
+/* ---------- Weights ---------- */
+
+.weight-regular { font-weight: var(--beacon-font-weight-regular); }
+.weight-medium { font-weight: var(--beacon-font-weight-medium); }
+.weight-semibold { font-weight: var(--beacon-font-weight-semibold); }
+.weight-bold { font-weight: var(--beacon-font-weight-bold); }
+
+/* ---------- Alignment ---------- */
+
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+/* ---------- Truncation ---------- */
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lineClamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

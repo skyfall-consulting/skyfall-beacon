@@ -1,0 +1,93 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-3);
+  padding: var(--beacon-space-3) var(--beacon-space-4);
+  background-color: var(--beacon-color-surface-default);
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  border-radius: var(--beacon-radius-md);
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: var(--beacon-color-text-primary);
+}
+
+.interactive {
+  cursor: pointer;
+  transition: background-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard),
+    border-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard),
+    box-shadow var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+.interactive:hover {
+  background-color: var(--beacon-color-surface-hover);
+  border-color: var(--beacon-color-border-brand);
+}
+
+.interactive:focus-visible {
+  outline: none;
+  border-color: var(--beacon-color-border-brand);
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+.locked {
+  opacity: var(--beacon-opacity-subtle);
+  background-color: var(--beacon-color-surface-subtle);
+}
+
+.order {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--beacon-radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--beacon-color-surface-sunken);
+  color: var(--beacon-color-text-muted);
+  font-size: var(--beacon-font-size-caption);
+  font-weight: var(--beacon-font-weight-semibold);
+}
+
+.orderComplete {
+  background-color: var(--beacon-color-success-50);
+  color: var(--beacon-color-success-700);
+}
+
+.identity {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--beacon-space-1);
+}
+
+.title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--beacon-space-3);
+}
+
+.kind {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+  color: var(--beacon-color-text-muted);
+  font-size: var(--beacon-font-size-caption);
+  line-height: var(--beacon-line-height-caption);
+}
+
+.trailing {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  color: var(--beacon-color-text-muted);
+}

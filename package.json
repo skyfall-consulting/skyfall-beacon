@@ -1,0 +1,86 @@
+{
+  "name": "@skyfall_ai/beacon",
+  "version": "0.1.0",
+  "description": "Skyfall Beacon — Guided-growth EdTech design system for learning, progress, and educator workflows",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./styles": "./dist/index.css",
+    "./styles.css": "./dist/index.css",
+    "./tokens": "./src/tokens/beacon-tokens.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src/tokens/*.css"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "vite build --config vite.lib.config.ts && cp dist/index.d.ts dist/index.d.mts",
+    "build:storybook": "storybook build",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist storybook-static",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "recharts": ">=2.10.0"
+  },
+  "peerDependenciesMeta": {
+    "recharts": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.3.5",
+    "@storybook/addon-docs": "^10.3.5",
+    "@storybook/react": "^10.3.5",
+    "@storybook/react-vite": "^10.3.5",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "recharts": "^2.15.4",
+    "storybook": "^10.3.5",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vite": "^8.0.0",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "keywords": [
+    "edtech",
+    "education",
+    "learning",
+    "design-system",
+    "react",
+    "accessibility",
+    "components",
+    "ui",
+    "skyfall"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/skyfall-consulting/skyfall-beacon#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyfall-consulting/skyfall-beacon.git"
+  }
+}

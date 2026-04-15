@@ -1,0 +1,82 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--beacon-space-3);
+}
+
+.medallion {
+  flex-shrink: 0;
+  border-radius: var(--beacon-radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--beacon-color-text-inverse);
+  position: relative;
+  transition: box-shadow var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--beacon-space-1);
+  min-width: 0;
+}
+
+/* ---- Tones ---- */
+
+.reward {
+  background: linear-gradient(135deg, var(--beacon-color-accent-amber-400) 0%, var(--beacon-color-accent-amber-600) 100%);
+}
+
+.milestone {
+  background: linear-gradient(135deg, var(--beacon-color-brand-primary-400) 0%, var(--beacon-color-brand-primary-600) 100%);
+}
+
+.streak {
+  background: linear-gradient(135deg, #FF8E3C 0%, #E54B22 100%);
+}
+
+.mastery {
+  background: linear-gradient(135deg, var(--beacon-color-brand-secondary-400) 0%, var(--beacon-color-brand-secondary-700) 100%);
+}
+
+/* ---- Glow ---- */
+
+.glow.reward {
+  box-shadow: var(--beacon-achievement-glow);
+}
+
+.glow.milestone {
+  box-shadow: 0 0 0 4px rgba(31, 134, 240, 0.18);
+}
+
+.glow.streak {
+  box-shadow: 0 0 0 4px rgba(229, 75, 34, 0.20);
+}
+
+.glow.mastery {
+  box-shadow: 0 0 0 4px rgba(85, 70, 209, 0.20);
+}
+
+/* ---- Unearned ---- */
+
+.unearned .medallion {
+  background: var(--beacon-color-neutral-100);
+  color: var(--beacon-color-text-muted);
+  box-shadow: none;
+}
+
+.unearned .text {
+  opacity: var(--beacon-opacity-subtle);
+}

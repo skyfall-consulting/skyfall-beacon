@@ -1,0 +1,15 @@
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.control {
+  width: 100%;
+}
+
+.disabled {
+  opacity: var(--beacon-opacity-disabled);
+  pointer-events: none;
+}

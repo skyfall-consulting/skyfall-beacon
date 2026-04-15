@@ -1,0 +1,41 @@
+.appBar {
+  width: 100%;
+  height: 56px;
+  background-color: var(--beacon-color-surface-default);
+  border-bottom: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  box-shadow: var(--beacon-shadow-sm);
+  font-family: var(--beacon-font-family-sans);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--beacon-space-5);
+  gap: var(--beacon-space-6);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: var(--beacon-font-size-heading-sm);
+  font-weight: var(--beacon-font-weight-bold);
+  color: var(--beacon-color-text-primary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+  flex: 1;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-3);
+  flex-shrink: 0;
+  margin-left: auto;
+}

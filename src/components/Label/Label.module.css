@@ -1,0 +1,25 @@
+.label {
+  display: block;
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-label-lg);
+  font-weight: var(--beacon-font-weight-medium);
+  line-height: var(--beacon-line-height-label-lg);
+  color: var(--beacon-color-text-primary);
+  margin-bottom: var(--beacon-space-1);
+}
+
+.required {
+  color: var(--beacon-color-error-500);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

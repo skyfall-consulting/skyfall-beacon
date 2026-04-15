@@ -1,0 +1,82 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--beacon-space-2);
+  cursor: pointer;
+  min-height: var(--beacon-size-touch-min);
+  user-select: none;
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  border-radius: var(--beacon-radius-sm);
+  background-color: var(--beacon-color-surface-default);
+  color: transparent;
+  flex-shrink: 0;
+  box-shadow: var(--beacon-shadow-inset-xs);
+  transition:
+    background-color var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard),
+    border-color var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard),
+    color var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard),
+    box-shadow var(--beacon-motion-duration-base) var(--beacon-motion-easing-standard);
+}
+
+.wrapper:hover .control {
+  border-color: var(--beacon-color-border-strong);
+  background-color: var(--beacon-color-surface-hover);
+}
+
+.input:checked + .control {
+  background: linear-gradient(
+    180deg,
+    var(--beacon-color-brand-primary-500) 0%,
+    var(--beacon-color-brand-primary-600) 100%
+  );
+  border-color: var(--beacon-color-brand-primary-600);
+  color: var(--beacon-color-text-inverse);
+  box-shadow: var(--beacon-shadow-xs);
+}
+
+.input:focus-visible + .control {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: var(--beacon-focus-ring-offset);
+  box-shadow: var(--beacon-shadow-focus);
+}
+
+.input:disabled + .control {
+  opacity: var(--beacon-opacity-disabled);
+  cursor: not-allowed;
+}
+
+.input:disabled ~ .label {
+  opacity: var(--beacon-opacity-disabled);
+  cursor: not-allowed;
+}
+
+.label {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-body-md);
+  line-height: var(--beacon-line-height-body-md);
+  color: var(--beacon-color-text-primary);
+}
+
+.error .control {
+  border-color: var(--beacon-color-error-500);
+}

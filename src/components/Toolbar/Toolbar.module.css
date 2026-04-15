@@ -1,0 +1,36 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+  font-family: var(--beacon-font-family-sans);
+  background: var(--beacon-color-surface-default);
+  border-radius: var(--beacon-radius-md);
+  flex-wrap: wrap;
+}
+
+.sm { padding: var(--beacon-space-1); }
+.md { padding: var(--beacon-space-2); }
+
+.outlined {
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+}
+
+/* Button sizing within toolbar */
+.sm :global(button) { min-height: 28px; min-width: 28px; }
+.md :global(button) { min-height: 32px; min-width: 32px; }
+
+/* Group */
+.group {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+}
+
+/* Vertical divider */
+.divider {
+  width: 1px;
+  align-self: stretch;
+  min-height: 20px;
+  background: var(--beacon-color-border-default);
+  margin: 0 var(--beacon-space-1);
+}

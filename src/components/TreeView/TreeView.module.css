@@ -1,0 +1,101 @@
+.tree {
+  font-family: var(--beacon-font-family-sans);
+}
+
+.tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Node row */
+.node {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-1);
+  cursor: pointer;
+  border-radius: var(--beacon-radius-sm);
+  color: var(--beacon-color-text-primary);
+  transition: background-color var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+  user-select: none;
+}
+
+.sm.node { padding: 2px var(--beacon-space-2); font-size: var(--beacon-font-size-body-sm); min-height: 28px; }
+.md.node { padding: var(--beacon-space-1) var(--beacon-space-2); font-size: var(--beacon-font-size-body-md); min-height: 32px; }
+
+.node:hover {
+  background-color: var(--beacon-color-neutral-50);
+}
+
+.node:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: -2px;
+}
+
+.node.selected {
+  background-color: var(--beacon-color-brand-primary-50, rgba(26, 115, 232, 0.08));
+  color: var(--beacon-color-brand-primary-600, #1A73E8);
+}
+
+.node.disabled {
+  opacity: var(--beacon-opacity-disabled);
+  pointer-events: none;
+}
+
+/* Chevron toggle */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.chevron {
+  transition: transform var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+.chevronExpanded {
+  transform: rotate(90deg);
+}
+
+.leaf {
+  display: block;
+  width: 16px;
+}
+
+/* Icon slot */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--beacon-color-text-secondary);
+  flex-shrink: 0;
+}
+
+.selected .icon {
+  color: inherit;
+}
+
+/* Label */
+.label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Guide lines */
+.lined {
+  position: relative;
+}
+
+.lined::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--beacon-color-border-default);
+}

@@ -1,0 +1,55 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--beacon-space-3);
+}
+
+.ringBox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg {
+  display: block;
+  transform-origin: center;
+}
+
+.track {
+  stroke: var(--beacon-progress-track);
+}
+
+.fill {
+  transition: stroke-dashoffset var(--beacon-motion-duration-slow) var(--beacon-motion-easing-standard);
+}
+
+.fill.default {
+  stroke: var(--beacon-progress-fill-default);
+}
+
+.fill.success {
+  stroke: var(--beacon-progress-fill-success);
+}
+
+.fill.reward {
+  stroke: var(--beacon-progress-fill-reward);
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--beacon-font-family-sans);
+  font-weight: var(--beacon-font-weight-semibold);
+  color: var(--beacon-color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-body-sm);
+  color: var(--beacon-color-text-secondary);
+}

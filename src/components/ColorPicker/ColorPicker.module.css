@@ -1,0 +1,88 @@
+.picker {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--beacon-space-3);
+  font-family: var(--beacon-font-family-sans);
+}
+
+.disabled {
+  opacity: var(--beacon-opacity-disabled);
+  pointer-events: none;
+}
+
+.label {
+  font-size: var(--beacon-font-size-body-sm);
+  font-weight: var(--beacon-font-weight-medium);
+  color: var(--beacon-color-text-primary);
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-2);
+  position: relative;
+}
+
+.swatch {
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: box-shadow var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+.sm .swatch { width: 24px; height: 24px; border-radius: var(--beacon-radius-sm); }
+.md .swatch { width: 32px; height: 32px; border-radius: var(--beacon-radius-md); }
+
+.swatch:hover {
+  box-shadow: var(--beacon-shadow-sm);
+}
+
+.swatch:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: 2px;
+}
+
+.hex {
+  font-size: var(--beacon-font-size-body-sm);
+  font-family: var(--beacon-font-family-mono, monospace);
+  color: var(--beacon-color-text-secondary);
+  min-width: 68px;
+}
+
+.nativeInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.swatchGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--beacon-space-1);
+}
+
+.swatchOption {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--beacon-radius-sm);
+  border: var(--beacon-border-width-hairline) var(--beacon-border-style-default) var(--beacon-color-border-default);
+  cursor: pointer;
+  transition:
+    transform var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard),
+    box-shadow var(--beacon-motion-duration-fast) var(--beacon-motion-easing-standard);
+}
+
+.swatchOption:hover {
+  transform: scale(1.15);
+}
+
+.swatchOption:focus-visible {
+  outline: var(--beacon-border-width-medium) solid var(--beacon-focus-outline-color);
+  outline-offset: 2px;
+}
+
+.swatchOption.selected {
+  box-shadow: 0 0 0 2px var(--beacon-color-surface-default), 0 0 0 4px var(--beacon-color-brand-primary-500);
+}

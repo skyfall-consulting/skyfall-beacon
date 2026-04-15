@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+}
+
+.fixed {
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+}
+
+.autoFill {
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-item-width), 1fr));
+}
+
+/* Gap */
+.gap-sm { gap: var(--beacon-space-2); }
+.gap-md { gap: var(--beacon-space-4); }
+.gap-lg { gap: var(--beacon-space-6); }
+.gap-xl { gap: var(--beacon-space-8); }
+
+/* Align items */
+.align-start { align-items: start; }
+.align-center { align-items: center; }
+.align-end { align-items: end; }
+.align-stretch { align-items: stretch; }

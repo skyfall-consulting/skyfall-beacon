@@ -1,0 +1,97 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(180px, 1fr);
+  gap: var(--beacon-space-6);
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartWrap {
+  position: relative;
+  width: 100%;
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.centerLabel {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-display-md);
+  line-height: 1;
+  font-weight: var(--beacon-font-weight-semibold);
+  color: var(--beacon-color-text-primary);
+  letter-spacing: var(--beacon-tracking-tight);
+  font-variant-numeric: tabular-nums;
+}
+
+.centerSub {
+  margin-top: var(--beacon-space-1);
+  font-size: var(--beacon-font-size-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--beacon-tracking-wide);
+  color: var(--beacon-color-text-secondary);
+  font-weight: var(--beacon-font-weight-medium);
+}
+
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--beacon-space-2);
+}
+
+.legendItem {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  align-items: center;
+  gap: var(--beacon-space-3);
+  padding: var(--beacon-space-2) 0;
+  border-bottom: var(--beacon-border-width-hairline) solid var(--beacon-color-border-subtle);
+  font-size: var(--beacon-font-size-body-sm);
+}
+
+.legendItem:last-child {
+  border-bottom: none;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--beacon-radius-sm);
+}
+
+.legendLabel {
+  color: var(--beacon-color-text-secondary);
+}
+
+.legendValue {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--beacon-space-2);
+  font-family: var(--beacon-font-family-mono);
+  font-weight: var(--beacon-font-weight-semibold);
+  color: var(--beacon-color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.legendPct {
+  font-family: var(--beacon-font-family-sans);
+  font-size: var(--beacon-font-size-caption);
+  font-weight: var(--beacon-font-weight-medium);
+  color: var(--beacon-color-text-muted);
+}

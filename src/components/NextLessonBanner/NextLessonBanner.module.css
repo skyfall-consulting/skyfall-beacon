@@ -1,0 +1,86 @@
+.banner {
+  position: relative;
+  border-radius: var(--beacon-radius-lg);
+  padding: var(--beacon-space-5) var(--beacon-space-6);
+  overflow: hidden;
+  color: var(--beacon-color-text-inverse);
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 80% at 100% 0%, rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--beacon-space-4);
+  flex-wrap: wrap;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--beacon-radius-full);
+  background-color: rgba(255, 255, 255, 0.18);
+  color: var(--beacon-color-text-inverse);
+}
+
+.icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--beacon-space-1);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
+}
+
+.title {
+  margin: 0;
+  color: var(--beacon-color-text-inverse);
+}
+
+.context {
+  margin: 0;
+  opacity: 0.88;
+}
+
+.action {
+  flex-shrink: 0;
+}
+
+/* ---- Tones ---- */
+
+.momentum {
+  background: var(--beacon-progress-fill-gradient);
+}
+
+.milestone {
+  background: linear-gradient(135deg, var(--beacon-color-brand-secondary-500) 0%, var(--beacon-color-brand-secondary-700) 100%);
+}
+
+.gentle {
+  background: linear-gradient(135deg, var(--beacon-color-accent-mint-400) 0%, var(--beacon-color-accent-mint-600) 100%);
+}
+
+.celebration {
+  background: linear-gradient(135deg, var(--beacon-color-accent-amber-400) 0%, var(--beacon-color-accent-amber-600) 100%);
+}

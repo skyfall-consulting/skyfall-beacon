@@ -1,0 +1,61 @@
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<title>Skyfall Beacon — Design System</title>
+<style>
+  /* Light premium scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+  }
+
+  /* Brand logo sizing */
+  .sidebar-header img[src*="beacon_logo"] {
+    max-height: 36px !important;
+    object-fit: contain;
+  }
+
+  /* Manager chrome polish */
+  [role="main"] {
+    background: #FFFFFF;
+  }
+
+  /* Sidebar refinements */
+  nav.container {
+    background: #FAFBFC;
+  }
+
+  /* Sidebar item hover — soft luminous blue tint */
+  button[data-nodetype]:hover,
+  a[data-nodetype]:hover {
+    background: rgba(31, 134, 240, 0.06) !important;
+  }
+
+  /* Selected sidebar item */
+  button[data-selected="true"],
+  a[data-selected="true"] {
+    color: #1F86F0 !important;
+  }
+
+  /* Sidebar category headers — refined typography */
+  .sidebar-subheading {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #9CA3AF !important;
+  }
+
+  /* Panel tabs — clean bottom border */
+  [role="tablist"] {
+    border-bottom: 1px solid #E5E8EB;
+  }
+</style>

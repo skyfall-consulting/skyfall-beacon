@@ -1,0 +1,112 @@
+/* ---------------------------------------------------------------------------
+   Skyfall Beacon — Storybook presentation polish
+   Clean, editorial, white-background-first docs experience
+   --------------------------------------------------------------------------- */
+
+/* ---- Docs page ---- */
+
+.sbdocs-wrapper {
+  background: #FFFFFF !important;
+  padding: 40px 48px !important;
+}
+
+.sbdocs-content {
+  max-width: 920px !important;
+}
+
+/* Docs page title */
+.sbdocs-title {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #1A2332 !important;
+  margin-bottom: 8px !important;
+}
+
+/* Docs subtitle / description */
+.sbdocs-p {
+  color: #4A5568 !important;
+  line-height: 1.7 !important;
+  font-size: 15px !important;
+}
+
+/* ---- Story canvas ---- */
+
+/* Canvas container — clean border, generous padding */
+.docs-story {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E8EB !important;
+  border-radius: 10px !important;
+  padding: 40px !important;
+}
+
+/* Standalone story canvas */
+.sb-show-main {
+  background: #FFFFFF !important;
+}
+
+/* ---- Docs code blocks ---- */
+
+.docblock-source {
+  background: #F8FAFC !important;
+  border: 1px solid #E5E8EB !important;
+  border-radius: 8px !important;
+}
+
+/* ---- ArgsTable / Controls ---- */
+
+.docblock-argstable-head th {
+  background: #F8FAFC !important;
+  color: #6B7685 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-weight: 600 !important;
+}
+
+.docblock-argstable-body td {
+  border-color: #F0F2F5 !important;
+  color: #1A2332 !important;
+}
+
+/* ---- Subtitle badges ---- */
+
+.sbdocs-subtitle {
+  color: #6B7685 !important;
+  font-weight: 500 !important;
+}
+
+/* ---- Anchor links ---- */
+
+.sbdocs-a,
+.sbdocs-wrapper a {
+  color: #1F86F0 !important;
+  text-decoration: none !important;
+}
+
+.sbdocs-a:hover,
+.sbdocs-wrapper a:hover {
+  text-decoration: underline !important;
+}
+
+/* ---- Docs dividers ---- */
+
+.sbdocs-hr {
+  border-color: #F0F2F5 !important;
+  margin: 32px 0 !important;
+}
+
+/* ---- Section headings in docs ---- */
+
+.sbdocs-h2 {
+  font-weight: 650 !important;
+  color: #1A2332 !important;
+  border-bottom: 1px solid #F0F2F5 !important;
+  padding-bottom: 8px !important;
+  margin-top: 40px !important;
+}
+
+.sbdocs-h3 {
+  font-weight: 600 !important;
+  color: #2D3748 !important;
+  margin-top: 32px !important;
+}
