@@ -6,7 +6,7 @@ export default create({
   // Brand
   brandTitle: 'Skyfall Beacon',
   brandUrl: 'https://skyfall.consulting',
-  brandImage: '/beacon_logo.svg',
+  brandImage: '/beacon_logo.png',
   brandTarget: '_self',
 
   // Colors — Beacon luminous sky
